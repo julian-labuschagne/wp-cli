@@ -1,4 +1,4 @@
-FROM php:5-cli
+FROM php:7.3.10
 
 RUN apt-get update && apt-get install -y less mysql-client && \
     docker-php-ext-install mysqli
