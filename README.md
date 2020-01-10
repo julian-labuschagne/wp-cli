@@ -1,4 +1,8 @@
-Wordpress CLI Docker image
+# Wordpress CLI - Docker image
+
+A command line utility that is used for managing Wordpress websites.
+
+## Download
 
 This image can be found on Docker Hub.
 
@@ -10,7 +14,7 @@ docker pull julianlab/wp-cli:www-data
 
 ---
 
-**PLease note:**
+**Please note:**
 
 The www-data branch is run as the www-data user with uid: 33 and gid: 33.
 
