@@ -8,14 +8,13 @@ ADD https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar /u
 RUN mkdir /var/wp
 VOLUME /var/wp
 
-RUN groupadd -g 1000 -r wordpress && \
-    useradd --no-log-init -r -u 1000 -d /var/wp -g wordpress -G www-data wordpress
-
-RUN chown wordpress:wordpress /var/wp && \
+RUN chown www-data:www-data /var/wp && \
     chmod 775 /var/wp && \
     chmod 755 /usr/local/bin/wp
 
-USER wordpress
+USER www-data
+
 WORKDIR	/var/wp
+
 #ENTRYPOINT ["php", "/usr/local/bin/wp"]
 #ENTRYPOINT ["php"]
